@@ -31,3 +31,11 @@ export const putRecipeObject = async ({Key, Body}) => {
     Body
   });
 };
+
+export const putInventoryObject = async ({Key, Body}) => {
+  return putObject({
+    Bucket: awsConfig.inventoryBucket,
+    Key,
+    Body
+  });
+};

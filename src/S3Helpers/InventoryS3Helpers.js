@@ -10,7 +10,11 @@ export const getS3Objects = async () => {
 };
 
 export const getS3ObjectContent = async (path) => {
-  const resolvePath = path.replace(new RegExp(`${NAME_SPACE}/`, 'g'), '');
+  if (path.indexOf(NAME_SPACE) < 0) return;
+  const resolvePath = path
+    .replace(new RegExp(`${NAME_SPACE}/_stores/`, 'g'), '')
+    .replace(new RegExp(`${NAME_SPACE}/`, 'g'), '');
+
   const url = getInventoryS3ToolsUrl({
     subPath: `tools/s3Files/${resolvePath}`
   });

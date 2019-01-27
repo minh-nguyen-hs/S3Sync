@@ -2,6 +2,7 @@
   "accessKeyId": "",
   "secretAccessKey": "",
   "region": "us-east-2",
-  "recipeBucket": "ntm-recipe",
-  "inventoryBucket": "ntm-inv"
+  "recipeBucket": "hs-prod-dev",
+  "inventoryBucket": "hs-inv",
+  "invProcBucket": "hs-prod-dev"
 }

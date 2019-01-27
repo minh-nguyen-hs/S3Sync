@@ -6,6 +6,7 @@ export const TOKEN = envConfig.token;
 
 const RECIPE_URL = envConfig.recipeUrl;
 const INVENTORY_URL = envConfig.inventoryUrl;
+const INVPROC_URL = envConfig.invProcUrl;
 
 const getUrl = ({ url, nameSpace, subPath, env }) => {
   let retUrl = url.replace(/\${env}/g, env);
@@ -32,4 +33,12 @@ export const getInventoryS3ToolsUrl = (options) => getUrl({
   nameSpace: NAME_SPACE,
   url: INVENTORY_URL,
   subPath: options.subPath
+});
+
+export const getInvProcS3ToolsUrl = (options) => getUrl({
+  ...options,
+  env: ENV,
+  nameSpace: NAME_SPACE,
+  url: INVPROC_URL,
+  subPath: 'tools/invproc/query?url=s3/view?path=' + options.subPath
 });

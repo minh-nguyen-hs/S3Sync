@@ -1,6 +1,6 @@
 {
-  "accessKeyId": "AKIAIR2DAXRDFSXJPFTA",
-  "secretAccessKey": "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",
+  "accessKeyId": "",
+  "secretAccessKey": "",
   "region": "us-east-2",
   "recipeBucket": "hs-recipe",
   "inventoryBucket": "hs-inv",

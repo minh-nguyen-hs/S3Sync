@@ -1,8 +1,9 @@
 {
-  "accessKeyId": "",
-  "secretAccessKey": "",
+  "accessKeyId": "AKIAIR2DAXRDFSXJPFTA",
+  "secretAccessKey": "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",
   "region": "us-east-2",
-  "recipeBucket": "hs-prod-dev",
+  "recipeBucket": "hs-recipe",
   "inventoryBucket": "hs-inv",
-  "invProcBucket": "hs-prod-dev"
+  "invProcBucket": "hs-prod-dev",
+  "cashBucket": "hs-prod-dev"
 }

@@ -1,6 +1,8 @@
 import { syncRecipeData } from './jobs/syncRecipeData';
 import { syncInventoryData } from './jobs/syncInventoryData';
 import { syncInvProcData } from './jobs/syncInvProcData';
+import { syncCashData } from './jobs/syncCashData';
+import { syncCashRedis } from './jobs/syncCashRedis';
 
 const main = async () => {
   const args = process.argv;
@@ -12,6 +14,10 @@ const main = async () => {
       return await syncInventoryData();
     case 'invproc':
       return await syncInvProcData();
+    case 'cash':
+      return await syncCashData();
+    case 'cashRedis':
+      return await syncCashRedis();
   }
 };
 

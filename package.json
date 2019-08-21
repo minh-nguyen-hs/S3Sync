@@ -5,14 +5,16 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node src/index.js"
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 babel-node src/index.js",
+    "test-script": "babel-node src/testScript/index.js"
   },
   "author": "Minh Nguyen",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.345.0",
-    "axios": "^0.18.0",
-    "lodash": "^4.17.11"
+    "axios": "^0.18.1",
+    "lodash": "^4.17.15",
+    "redis": "^2.8.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

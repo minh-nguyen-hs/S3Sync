@@ -47,3 +47,11 @@ export const putInvProcObject = async ({Key, Body}) => {
     Body
   });
 };
+
+export const putCashObject = async ({Key, Body}) => {
+  return putObject({
+    Bucket: awsConfig.cashBucket,
+    Key,
+    Body
+  });
+};
